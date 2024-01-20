@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --purple500: #281154;
+  --purple300: #270082;
+  --purple600: #1b0058;
+  --red600: #dc0000;
+  --body: #f9f6ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin: 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--purple300);
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.5);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 600px;
+  color: white;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  transition: 0.2s ease-in-out;
+}
+button:hover {
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease-in;
+}
+
+nav ul li:hover {
+  border-bottom: 2px solid white;
+  transition: 0.2s ease-in;
+}
+
+.hero-section {
+  background-image: url(img/main.png);
+  height: 100vh;
+  display: grid;
+  color: white;
+  place-items: center;
+  text-align: center;
+}
+
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero-section h1 {
+  font-size: 93px;
+}
+
+.hero-section h3 {
+  font-size: 32px;
+}
+
+.music-section {
+  padding-top: 50px;
+  background-color: var(--purple500);
+  color: white;
+}
+
+.music-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ipad-iphone-img {
+  position: relative;
+  top: 400px;
+  margin-top: -400px;
+}
+
+.img1 {
+  width: 100%;
+}
+
+.primary-btn {
+  background-color: var(--red600);
+  color: white;
+}
+
+.secondary-btn {
+  background-color: var(--purple300);
+  color: white;
+}
+
+.about-music {
+  padding-top: 500px;
+  display: grid;
+  place-items: center;
+  gap: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mac-img {
+  width: 100%;
+}
+
+.video-section {
+  background-image: url(img/video.png);
+  /* min-height: 800px;
+   */
+  height: 70vh;
+  display: grid;
+  place-items: center;
+  color: white;
+  text-align: center;
+}
+
+.video-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: -200px;
+}
+
+.hero-section,
+.video-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gift-section {
+  display: flex;
+  justify-content: center;
+  margin: 70px 0;
+  gap: 50px;
+  scroll-margin: 130px;
+}
+
+.gift-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-upper {
+  background-color: var(--purple600);
+  padding: 20px;
+}
+
+.footer-upper .container {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+
+.footer-upper h4 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+  margin-bottom: 10px;
+}
+
+.footer-lower {
+  background-color: var(--purple300);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .gift-section {
+    flex-direction: column;
+  }
+
+  .gift-img {
+    width: 100%;
+  }
+  .footer-upper .container {
+    flex-direction: column;
+  }
+  .footer-links {
+    margin-top: 20px;
+  }
+
+  .logo {
+    font-size: 30px;
+    /* padding: 20px; */
+    height: 5vh;
+  }
+  .hero-section,
+  .music-section,
+  .gift-section,
+  .video-section {
+    padding: 10px;
+  }
+  .hero-section {
+    height: 74vh;
+  }
+  .hero-section h1 {
+    font-size: 50px;
+  }
+  .hero-section h3 {
+    font-size: 22px;
+  }
+  .video-section {
+    padding-top: 112px;
+  }
+}
+
+@media (max-width: 410px) {
+  nav {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  nav ul li {
+    display: none;
+  }
+  .music-section .container {
+    margin-top: -170px;
+    height: 100vh;
+  }
+  .about-music {
+    padding-top: 200px;
+  }
+}
